@@ -1,7 +1,6 @@
-# Mishal-Repo-
-My first test in Github 
+#name: Mishal E. 
+#date: 10.14.2020
 
-## introduction
-library(tidyverse)
+## Mishal-Repo-
+-My first test in Github 
 
-## Hello world 
