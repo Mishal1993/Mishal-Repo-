@@ -1,0 +1,56 @@
+---
+title: "Chick Weights analysis "
+Author: "Mishal E. Alotaibi"
+Date: "10.04.2020"
+output: html_document 
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+library(tidyverse)
+library(DT)
+```
+
+## Descriptive Statistics
+```{r cars, echo = FALSE}
+chicktable <- chickwts
+chickwts
+
+chickwts %>% 
+  group_by(feed) %>%
+  summarise(n = length(feed),
+            average = mean(weight), 
+            SD = sd(weight))
+datatable(chicktable)
+``` 
+
+
+## Plots
+
+```{r boxplot, echo=FALSE}
+ggplot(chickwts, aes(x=feed, y=weight)) + 
+  geom_boxplot()
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r points, echo=FALSE}
+ggplot(chickwts, aes(x=feed, y=weight)) + 
+    geom_jitter()+
+  stat_summary(fun.data = mean_sdl, 
+               fun.args = list(mult = 1), 
+               col = "red")
+
+```
+## Inferential Statistics
+
+```{r anova, echo=FALSE}
+chickwts_lm <- lm(weight ~ feed, data = chickwts)
+chickwts_lm
+
+# 1-way ANOVA
+anova(chickwts_lm)
+```
+
+
