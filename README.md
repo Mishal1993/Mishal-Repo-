@@ -1,6 +1,7 @@
-#NAme: Mishal Alotaibi
-#date: 10/18/2020
-#Analyse my own data 
+#Mishal_Misk/DS
+
+this repo includes our course materials through out this journey to learn R. 
+
 
 
 
