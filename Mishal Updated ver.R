@@ -10,6 +10,9 @@ library(tidyverse)
 
 us_disaster <- read.csv("who_suicide_statistics.csv")
 
+head(us_disaster)
 
-
+#min and max ages for suicide people 
+min(us_disaster$age)
+max(us_disaster$age)
 
