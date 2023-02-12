@@ -28,7 +28,7 @@ typeof(jems)
 
 jems %>% filter(clarity== "VVS2" & cut == "Good")
 
-#exercise 8.3
+#exercise 8.3:
 
 
 clarity <- jems %>% filter(clarity=="IF") %>%  nrow(clarity)
