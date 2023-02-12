@@ -24,6 +24,7 @@ test
 test_df <- data.frame(test, stringsAsFactors = TRUE)
 test_df$test
 
+
 # But tibbles won't switch types:
 test_tb <- tibble(test)
 test_tb$test
