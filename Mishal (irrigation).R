@@ -28,6 +28,7 @@ irrigation %>%
   select(`N. America`,`S. America`)
 
 
+
 #tidy data 
  irrigation_t <- irrigation %>% 
    pivot_longer(-year, names_to = 'region')
