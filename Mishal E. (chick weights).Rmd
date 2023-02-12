@@ -26,6 +26,7 @@ datatable(chicktable)
 ``` 
 
 
+
 ## Plots
 
 ```{r boxplot, echo=FALSE}
